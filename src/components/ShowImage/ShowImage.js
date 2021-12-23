@@ -8,7 +8,7 @@ class ShowImage extends React.Component {
 
 
     showImages=()=>{
-        const {number, imageList, total} = this.props
+        const {number} = this.props
         if(number<9) {
             return DATA[number].image
         }

@@ -1,20 +1,9 @@
 import axios from "axios";
 
-
-export const axiosApi = axios.create({ baseURL: 'https://61c2f2dc9cfb8f0017a3e7c8.mockapi.io/animals/', });
-const API='https://61c2f2dc9cfb8f0017a3e7c8.mockapi.io/animals/'
-
 //
-// export const getImagesFromApi= async () => {
-//     try {
-//         // const Data =  await axiosApi.get('')
-//         const Data = await axios.get(API);
-//         console.log('da')
-//         return  Data
-//     } catch (err) {
-//         console.log(err)
-//     }
-// }
+// export const axiosApi = axios.create({ baseURL: 'https://61c2f2dc9cfb8f0017a3e7c8.mockapi.io/animals/', });
+// const API='https://61c2f2dc9cfb8f0017a3e7c8.mockapi.io/animals/'
+
 export const DATA = [
         {
         image:'https://images.unsplash.com/photo-1546182990-dffeafbe841d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YW5pbWFsfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
