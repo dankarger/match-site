@@ -5,3 +5,15 @@ button {
     text-shadow: 1px 1px 12px grey;
 
 }
+
+.red {
+    background: whitesmoke;
+    color:red;
+    text-shadow: #363131 1px 1px ;
+}
+
+.green {
+    background: whitesmoke;
+    color:limegreen;
+    text-shadow:#363131  1px 1px ;
+}

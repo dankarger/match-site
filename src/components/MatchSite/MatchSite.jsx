@@ -27,8 +27,8 @@ export default class MatchSite extends React.Component{
 
     }
     componentDidUpdate(prevProps, prevState, snapshot) {
-       if(this.state.numberOfImage>=DATA.length){
-           this.setState({numberOfImage:0})
+       if(this.state.numberOfImage>7){
+           this.setState({numberOfImage:0,countPlus:0,countMinus:0})
        }
     }
 
@@ -62,10 +62,11 @@ export default class MatchSite extends React.Component{
                     <Counter icon={icons.plus} count={this.state.countPlus}/>
                     <Counter icon={icons.minus} count={this.state.countMinus}/>
                 </div>
+
                 <ShowImage imageList={this.state.imagesList} number={this.state.numberOfImage} total={10}/>
                 <div className="Buttons-div">
-                    <Button callback={this.handlePlusButton} name={'Plus'} icon={icons.plus}/>
-                    <Button callback={this.handleMinusButton} name={'Minus'} icon={icons.minus}/>
+                    <Button className='green'  callback={this.handlePlusButton} name={'Plus'} icon={icons.plus}/>
+                    <Button className='red' callback={this.handleMinusButton} name={'Minus'} icon={icons.minus}/>
                 </div>
 
             </div>
