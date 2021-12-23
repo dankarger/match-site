@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import MatchSite from "./components/MatchSite/Match.site";
 
