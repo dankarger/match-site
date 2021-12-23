@@ -1,9 +1,9 @@
-import React,  {useState} from "react";
+import React from "react";
 import Counter from "../Counter/Counter";
 import './MatchSite.css'
 import Button from "../Button/Button";
 import ShowImage from "../ShowImage/ShowImage";
-import {axiosApi, getImagesFromApi,DATA} from "../Api/Api";
+import {DATA} from "../Api/Api";
 
 
 const icons = {
@@ -21,12 +21,6 @@ export default class MatchSite extends React.Component{
        numberOfImage:0
     }
 
-    // getImagesList= async ()=>{
-    //     const images = await getImagesFromApi();
-    //     this.setState([{imagesList:images.data}])
-    //     console.log('d',images.data)
-    //     return images.data
-    // }
     componentDidMount() {
         const data=DATA
         this.setState({imagesList:data},()=>{console.log('dsdsd',data)})
