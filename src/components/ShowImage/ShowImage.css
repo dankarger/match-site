@@ -1,10 +1,15 @@
 .ShowImageDiv {
-    width:50vw;
-    height:50vh;
+    /*max-width:50vw;*/
+    /*max-height:50vh*/
+    width:50%;
+    height:50%;
 }
 
 .image {
     width:100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    border:3px solid #252424;
+    box-shadow: 2px 2px 30px grey;
 
 }

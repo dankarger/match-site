@@ -3,6 +3,8 @@ import Counter from "../Counter/Counter";
 import './MatchSite.css'
 import Button from "../Button/Button";
 import ShowImage from "../ShowImage/ShowImage";
+import {axiosApi, getImagesFromApi,DATA} from "../Api/Api";
+
 
 const icons = {
     plus: <i className="fas fa-check-circle"></i> ,
@@ -14,7 +16,26 @@ const icons = {
 export default class MatchSite extends React.Component{
    state = {
         countPlus:0,
-        countMinus:0
+        countMinus:0,
+       imagesList:[],
+       numberOfImage:0
+    }
+
+    // getImagesList= async ()=>{
+    //     const images = await getImagesFromApi();
+    //     this.setState([{imagesList:images.data}])
+    //     console.log('d',images.data)
+    //     return images.data
+    // }
+    componentDidMount() {
+        const data=DATA
+        this.setState({imagesList:data},()=>{console.log('dsdsd',data)})
+
+    }
+    componentDidUpdate(prevProps, prevState, snapshot) {
+       if(this.state.numberOfImage>=DATA.length){
+           this.setState({numberOfImage:0})
+       }
     }
 
     handlePlusButton =()=>{
@@ -32,8 +53,10 @@ export default class MatchSite extends React.Component{
     }
 
     nextImage=()=>{
-
-       console.log('next')
+        this.setState((prev)=>{
+            return {numberOfImage:prev.numberOfImage + 1}
+        })
+       console.log('ds',this.state.numberOfImage)
     }
 
     render(){
@@ -45,7 +68,7 @@ export default class MatchSite extends React.Component{
                     <Counter icon={icons.plus} count={this.state.countPlus}/>
                     <Counter icon={icons.minus} count={this.state.countMinus}/>
                 </div>
-                <ShowImage image={'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'}/>
+                <ShowImage imageList={this.state.imagesList} number={this.state.numberOfImage} total={10}/>
                 <div className="Buttons-div">
                     <Button callback={this.handlePlusButton} name={'Plus'} icon={icons.plus}/>
                     <Button callback={this.handleMinusButton} name={'Minus'} icon={icons.minus}/>

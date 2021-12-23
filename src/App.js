@@ -1,5 +1,5 @@
 import './App.css';
-import MatchSite from "./components/MatchSite/Match.site";
+import MatchSite from "./components/MatchSite/MatchSite";
 
 
 
