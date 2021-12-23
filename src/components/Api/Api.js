@@ -13,7 +13,7 @@ export const DATA = [
         name:'Monkey'
     },
     {
-    images:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlIAJelOgwRkZmg7muy4RD-oVv1zu8nfbIyA&usqp=CAU',
+    images:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYMroLS_g3QdVY85JQ8fiQwLlWqGCappa5Mg&usqp=CAU',
         name:'Panda'
     },
     {
